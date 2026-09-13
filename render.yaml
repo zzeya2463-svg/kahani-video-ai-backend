@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kahani-video-api
+    env: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: GEMINI_API_KEY
+        sync: false # Set this manually in the Render dashboard!
